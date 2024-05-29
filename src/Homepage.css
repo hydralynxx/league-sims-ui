@@ -1,0 +1,95 @@
+/* src/Homepage.css */
+
+.container {
+    position: relative;
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    overflow-y: auto; /* Allow vertical scrolling */
+    color: rgb(56, 35, 12);
+    font-family: fantasy;
+    background-color: rgb(255, 255, 255);
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box;
+    border: 2px solid rgb(243, 209, 170);
+}
+
+.search-champion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(255, 237, 216);
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid rgb(243, 209, 170);
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; 
+    height: auto;
+    padding: 20px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(243, 209, 170);
+    border-radius: 10px;
+    width: 200px;
+}
+
+.champion-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 champions per row */
+    gap: 10px; /* Space between champions */
+    padding: 20px;
+    margin-top: 180px; /* Add margin to create space between champion list and search champion div */
+    border: 2px solid rgb(243, 209, 170);
+}
+
+.champion {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid rgb(243, 209, 170);
+    background-color: rgb(255, 237, 216);
+}
+
+.suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 220px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+    top: calc(100% - 20px); /* Adjust this value to be the height of your input field + some margin */
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
